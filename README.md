@@ -23,6 +23,7 @@ Counted total number of records
 Retrieved distinct sensor locations
 Output saved to task1_output.csv
 **OUTPUT**
+
 +----------+---------------------+------------+----------+-------------------+------------+
 | sensor_id| timestamp           | temperature| humidity | location          | sensor_type|
 +----------+---------------------+------------+----------+-------------------+------------+
@@ -49,6 +50,7 @@ Sorted locations by average temperature
 Output saved to task2_output.csv
 
 **OUTPUT**
+
 +-------------------+------------------+------------------+
 | location          | avg_temperature  | avg_humidity     |
 +-------------------+------------------+------------------+
@@ -66,6 +68,7 @@ Calculated average temperature for each hour
 Found that 9 PM (21:00) was the warmest time overall
 Output saved to task3_output.csv
 **OUTPUT**
+
 +-------------+-----------+
 | hour_of_day | avg_temp  |
 +-------------+-----------+
@@ -101,7 +104,7 @@ Displayed the top 5 hottest sensors
 
 
 
-Task 5: Pivot Table by Hour and Location
+**Task 5: Pivot Table by Hour and Location**
 Created a pivot table:
 Rows: sensor locations
 Columns: hours of the day (0–23)
