@@ -19,22 +19,16 @@ def generate_sensor_data(num_records=1000, output_file="sensor_data.csv"):
         writer.writeheader()
         
         for _ in range(num_records):
-            sensor_id = random.randint(1000, 1100)  # e.g., sensor IDs between 1000 and 1100
-            timestamp_str = fake.date_time_between(start_date="-5d", end_date="now").strftime("%Y-%m-%d %H:%M:%S")
-            temperature_val = round(random.uniform(15.0, 35.0), 2)  # range 15 to 35
-            humidity_val = round(random.uniform(30.0, 80.0), 2)     # range 30% to 80%
-            location_val = random.choice(LOCATIONS)
-            sensor_type_val = random.choice(SENSOR_TYPES)
-            
             writer.writerow({
-                "sensor_id": sensor_id,
-                "timestamp": timestamp_str,
-                "temperature": temperature_val,
-                "humidity": humidity_val,
-                "location": location_val,
-                "sensor_type": sensor_type_val
+                "sensor_id": random.randint(1000, 1100),
+                "timestamp": fake.date_time_between(start_date="-3d", end_date="now").strftime("%Y-%m-%d %H:%M:%S"),
+                "temperature": round(random.uniform(15.0, 35.0), 1),
+                "humidity": round(random.uniform(50.0, 80.0), 1),
+                "location": random.choice(LOCATIONS),
+                "sensor_type": random.choice(SENSOR_TYPES)
             })
 
+# Run the generator
 if __name__ == "__main__":
-    generate_sensor_data(num_records=1000, output_file="sensor_data.csv")
-    print("sensor_data.csv generated.")
+    generate_sensor_data()
+    print("✅ sensor_data.csv generated successfully.")
