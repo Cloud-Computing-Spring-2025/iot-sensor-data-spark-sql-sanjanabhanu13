@@ -23,7 +23,7 @@ Counted total number of records
 Retrieved distinct sensor locations
 Output saved to task1_output.csv
 **OUTPUT**
-
+```
 -------------------------------------------------------------------------------------------
 | sensor_id| timestamp           | temperature| humidity | location          | sensor_type|
 +------------------------------------------------------------------------------------+
@@ -33,6 +33,7 @@ Output saved to task1_output.csv
 |     1032 | 2025-04-11T06:44:18 |       24.3 |     53.4 | BuildingA_Floor1  | TypeB      |
 |     1055 | 2025-04-11T10:30:28 |       15.0 |     65.3 | BuildingA_Floor1  | TypeA      |
 +-----------------------------------------------------------------------------------------
+                                                                                         ```
 
 **Task 2: Filter & Aggregate**
 Filtered out readings with temperature below 18°C or above 30°C
